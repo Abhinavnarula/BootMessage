@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <form th:object="${newMessage}" action="#" th:action="@{'/home'}" method="post">
+        <label for="newMessageText">Submit this form</label>
+        <input th:field="*{text}" name="newMessageText" id="newMessageText" type="text" >
+        <input type="submit" value="Visit me">
+    </form>
+    <h1 th:each="msg : ${greetings}" th:text="${msg}">heya</h1>
+</body>
+</html>
